@@ -9,14 +9,14 @@ public class OrderBView {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter order code: ");
         String code = scanner.nextLine();
-        System.out.print("Enter product quota, pcs.: ");
-        String quota = scanner.nextLine();
+        System.out.print("Enter product quantity, pcs.: ");
+        String quantity = scanner.nextLine();
         System.out.print("Enter product price, USD: ");
         String price = scanner.nextLine();
         System.out.print("Enter delivery cost, USD: ");
         String delivery = scanner.nextLine();
 
-        return new String[] {code, quota, price, delivery};
+        return new String[] {code, quantity, price, delivery};
     }
 
     public void getOutput(String output) {

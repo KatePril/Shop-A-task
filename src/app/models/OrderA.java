@@ -6,7 +6,7 @@ public class OrderA extends Order{
         super(code);
     }
 
-    public double getOrderCost(int quota, double price) {
-        return Double.valueOf(quota) * price;
+    public double getOrderCost(int quantity, double price) {
+        return Double.valueOf(quantity) * price;
     }
 }
