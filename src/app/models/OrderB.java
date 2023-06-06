@@ -2,7 +2,7 @@ package app.models;
 
 public class OrderB extends Order{
 
-    double delivery;
+    private double delivery;
 
     public OrderB(String code, double delivery) {
         super(code);
@@ -11,5 +11,13 @@ public class OrderB extends Order{
 
     public double getOrderCost(double quantity, double price) {
         return quantity * price + delivery;
+    }
+
+    public double getDelivery() {
+        return delivery;
+    }
+
+    public void setDelivery(double delivery) {
+        this.delivery = delivery;
     }
 }
