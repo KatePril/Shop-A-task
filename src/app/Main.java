@@ -9,6 +9,7 @@ public class Main {
 
     static Scanner scanner;
     public  static void main(String[] args) {
+        filterOption(getOption());
     }
 
     private static int getOption() {
@@ -30,6 +31,10 @@ public class Main {
             case 2 -> {
                 OrderBController controller = new OrderBController();
                 controller.handleData();
+            }
+            default -> {
+                System.out.println("No such option :-(");
+                filterOption(getOption());
             }
         }
     }
