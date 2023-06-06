@@ -1,6 +1,7 @@
 package app.controllers;
 
 import app.models.AppModel;
+import app.utils.Constants;
 import app.views.AppView;
 
 public class AppController {
@@ -9,7 +10,15 @@ public class AppController {
         AppView view = new AppView();
         AppModel model = new AppModel();
 
-        model.filterOption(view.getOption());
+        filterOption(view.getOption(), view, model);
     }
 
+    private void filterOption(int option, AppView view, AppModel model) {
+        switch (option) {
+            case 1 -> model.executeOptionOne();
+            case 2 -> model.executeOptionTwo();
+            case 0 -> view.getOutput(Constants.CLOSE_APP_MSG);
+            default -> view.getOutput(Constants.WRONG_OPTION_MSG);
+        }
+    }
 }
